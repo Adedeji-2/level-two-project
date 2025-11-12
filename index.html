@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumia Alata - Fresh Food Delivery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">🍔 Jumia Alata</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-dark text-white ms-2" href="signin/signin.html">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-dark text-white ms-2" href="signup/signup.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-4">Delicious Food, Delivered Fast</h1>
+                    <p class="lead mb-4">Order your favorite meals from the best restaurants in your area and get them delivered to your door.</p>
+                    <div class="d-flex gap-3">
+                        <a href="signup/signup.html" class="btn btn-dark btn-lg fw-bold">Order Now</a>
+                        <a href="#menu" class="btn btn-outline-secondary btn-lg fw-bold">Browse Menu</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 text-center">
+                    <div class="hero-image">
+                        <span class="display-1">🍕</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 fs-1">Why Choose Jumia Alata?</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="feature-card shadow p-4 rounded-4 text-center">
+                        <div class="feature-icon mb-3">🚚</div>
+                        <h3 class="fw-bold">Fast Delivery</h3>
+                        <p>Get your food delivered in 30 minutes or less, guaranteed!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="feature-card shadow p-4 rounded-4 text-center">
+                        <div class="feature-icon mb-3">🔒</div>
+                        <h3 class="fw-bold">Secure Payment</h3>
+                        <p>Multiple payment options with 100% secure transactions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="feature-card shadow p-4 rounded-4 text-center">
+                        <div class="feature-icon mb-3">⭐</div>
+                        <h3 class="fw-bold">Best Quality</h3>
+                        <p>Only partnering with top-rated restaurants for fresh meals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section id="menu" class="menu-section py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 fs-1">Popular Dishes</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="menu-card shadow rounded-4 overflow-hidden">
+                        <div class="menu-image">🍔</div>
+                        <div class="p-3">
+                            <h4 class="fw-bold">Deluxe Burger</h4>
+                            <p class="text-muted">Juicy patty with fresh vegetables</p>
+                            <p class="fw-bold fs-5">$12.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="menu-card shadow rounded-4 overflow-hidden">
+                        <div class="menu-image">🍜</div>
+                        <div class="p-3">
+                            <h4 class="fw-bold">Spicy Noodles</h4>
+                            <p class="text-muted">Asian-style noodles with spice</p>
+                            <p class="fw-bold fs-5">$10.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="menu-card shadow rounded-4 overflow-hidden">
+                        <div class="menu-image">🍕</div>
+                        <div class="p-3">
+                            <h4 class="fw-bold">Cheese Pizza</h4>
+                            <p class="text-muted">Classic pizza with mozzarella</p>
+                            <p class="fw-bold fs-5">$11.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="menu-card shadow rounded-4 overflow-hidden">
+                        <div class="menu-image">🍱</div>
+                        <div class="p-3">
+                            <h4 class="fw-bold">Sushi Platter</h4>
+                            <p class="text-muted">Fresh sushi with ginger</p>
+                            <p class="fw-bold fs-5">$14.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5 bg-secondary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4 fs-1">About Jumia Alata</h2>
+                    <p class="mb-3">We are committed to bringing delicious food from your favorite restaurants directly to your doorstep. With our network of trusted restaurants and efficient delivery system, we ensure every meal arrives fresh and on time.</p>
+                    <p class="mb-3">Our mission is to make quality food accessible to everyone with just a few clicks. Join thousands of satisfied customers who trust Jumia Alata for their daily meals.</p>
+                </div>
+                <div class="col-lg-6 col-md-12 text-center">
+                    <div class="about-image display-1">🎯</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 fs-1">Get in Touch</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="contact-card shadow p-4 rounded-4 text-center">
+                        <div class="contact-icon mb-3">📧</div>
+                        <h4 class="fw-bold">Email</h4>
+                        <p><a href="mailto:support@jumiaalata.com" class="text-decoration-none">support@jumiaalata.com</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="contact-card shadow p-4 rounded-4 text-center">
+                        <div class="contact-icon mb-3">📱</div>
+                        <h4 class="fw-bold">Phone</h4>
+                        <p><a href="tel:+1234567890" class="text-decoration-none">+1 (234) 567-890</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="contact-card shadow p-4 rounded-4 text-center">
+                        <div class="contact-icon mb-3">📍</div>
+                        <h4 class="fw-bold">Location</h4>
+                        <p>123 Food Street, Foodville, FD 12345</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="fw-bold mb-0">&copy; 2025 Jumia Alata. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="signin/signin.html" class="text-white text-decoration-none me-3">Sign In</a>
+                    <a href="signup/signup.html" class="text-white text-decoration-none">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQjUivZ5eA7NTe+KN3t5xF6/uS0Hxs/gkM9aL7oHWN3X0YXBi8RfCLVqCfJYWl" crossorigin="anonymous"></script>
+</body>
+</html>
