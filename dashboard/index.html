@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Dejavu Co</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar bg-secondary">
+            <div class="sidebar-header p-4 text-white">
+                <h3 class="fw-bold">🍔 Dejavu Co</h3>
+                <p class="small mb-0">Dashboard</p>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home" data-section="home">
+                        <span class="icon me-2">🏠</span> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu" data-section="menu">
+                        <span class="icon me-2">🍽️</span> Browse Menu
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#orders" data-section="orders">
+                        <span class="icon me-2">📦</span> My Orders
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#favorites" data-section="favorites">
+                        <span class="icon me-2">❤️</span> Favorites
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#profile" data-section="profile">
+                        <span class="icon me-2">👤</span> Profile
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#settings" data-section="settings">
+                        <span class="icon me-2">⚙️</span> Settings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="../signin/signin.html">
+                        <span class="icon me-2">🚪</span> Sign Out
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content w-100">
+            <!-- Top Navigation Bar -->
+            <nav class="navbar navbar-expand-lg
+            navbar-dark bg-secondary sticky-top shadow">
+                <div class="container-fluid">
+                    <button class="btn btn-dark me-3" id="sidebarToggle">☰ Menu</button>
+                    <span class="navbar-brand mb-0 h1 d-none d-md-inline">Welcome back, User!</span>
+                    <div class="ms-auto d-flex align-items-center gap-3">
+                        <div class="search-bar d-none d-md-flex">
+                            <input type="text" class="form-control form-control-sm" placeholder="Search dishes...">
+                        </div>
+                        <div class="position-relative">
+                            <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">3</span>
+                            <span class="btn btn-outline-light position-relative">🛒 Cart</span>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown"
+                                data-bs-toggle="dropdown">
+                                👤
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="#profile">Profile</a></li>
+                                <li><a class="dropdown-item" href="#settings">Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="../signin/signin.html">Sign Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+
+                <!-- HOME SECTION -->
+                <section id="home-section" class="content-section active">
+                    <div class="container-fluid p-4">
+                        <!-- Welcome Card -->
+                        <div class="welcome-card bg-secondary text-white rounded-4 p-5 mb-5 shadow">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <h2 class="display-5 fw-bold mb-3">Welcome to Dejavu Co! 🎉</h2>
+                                    <p class="lead mb-0">Order your favorite meals and get them delivered hot to your
+                                        door. Fast, Fresh, and Delicious!</p>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <span class="display-1">🍕</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Stats -->
+                        <div class="row mb-5 g-4">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="stat-card shadow rounded-4 p-4 text-center bg-white">
+                                    <div class="stat-icon">📦</div>
+                                    <h5 class="fw-bold mt-3">Total Orders</h5>
+                                    <p class="stat-value text-secondary">12</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="stat-card shadow rounded-4 p-4 text-center bg-white">
+                                    <div class="stat-icon">💰</div>
+                                    <h5 class="fw-bold mt-3">Total Spent</h5>
+                                    <p class="stat-value text-secondary">$156.50</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="stat-card shadow rounded-4 p-4 text-center bg-white">
+                                    <div class="stat-icon">⭐</div>
+                                    <h5 class="fw-bold mt-3">Loyalty Points</h5>
+                                    <p class="stat-value text-secondary">450</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="stat-card shadow rounded-4 p-4 text-center bg-white">
+                                    <div class="stat-icon">❤️</div>
+                                    <h5 class="fw-bold mt-3">Favorites</h5>
+                                    <p class="stat-value text-secondary">8</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Featured Restaurants -->
+                        <h3 class="fw-bold mb-4">Featured Restaurants</h3>
+                        <div class="row g-4 mb-5">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="restaurant-card shadow rounded-4 overflow-hidden">
+                                    <div class="restaurant-image">🍔</div>
+                                    <div class="p-4">
+                                        <h5 class="fw-bold">Burger Palace</h5>
+                                        <p class="text-muted small">Fast Food • 25 mins away</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-warning text-dark">⭐ 4.8</span>
+                                            <button class="btn btn-sm btn-secondary">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="restaurant-card shadow rounded-4 overflow-hidden">
+                                    <div class="restaurant-image">🍝</div>
+                                    <div class="p-4">
+                                        <h5 class="fw-bold">Italian Corner</h5>
+                                        <p class="text-muted small">Italian • 35 mins away</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-warning text-dark">⭐ 4.9</span>
+                                            <button class="btn btn-sm btn-secondary">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="restaurant-card shadow rounded-4 overflow-hidden">
+                                    <div class="restaurant-image">🍜</div>
+                                    <div class="p-4">
+                                        <h5 class="fw-bold">Noodle House</h5>
+                                        <p class="text-muted small">Asian • 20 mins away</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-warning text-dark">⭐ 4.7</span>
+                                            <button class="btn btn-sm btn-secondary">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Orders -->
+                        <h3 class="fw-bold mb-4">Recent Orders</h3>
+                        <div class="recent-orders bg-white rounded-4 shadow p-4">
+                            <table class="table table-hover mb-0">
+                                <thead>
+                                    <tr class="border-bottom">
+                                        <th class="text-secondary">Order ID</th>
+                                        <th class="text-secondary">Restaurant</th>
+                                        <th class="text-secondary">Date</th>
+                                        <th class="text-secondary">Amount</th>
+                                        <th class="text-secondary">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#ORD001</td>
+                                        <td>Burger Palace</td>
+                                        <td>Nov 24, 2025</td>
+                                        <td>$25.50</td>
+                                        <td><span class="badge bg-success">Delivered</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD002</td>
+                                        <td>Italian Corner</td>
+                                        <td>Nov 23, 2025</td>
+                                        <td>$35.75</td>
+                                        <td><span class="badge bg-success">Delivered</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD003</td>
+                                        <td>Noodle House</td>
+                                        <td>Nov 22, 2025</td>
+                                        <td>$18.99</td>
+                                        <td><span class="badge bg-success">Delivered</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- MENU SECTION -->
+                <section id="menu-section" class="content-section">
+                    <div class="container-fluid p-4">
+                        <h2 class="fw-bold mb-4">Browse Our Menu</h2>
+
+                        <!-- Category Filter -->
+                        <div class="category-filter mb-4">
+                            <button class="btn btn-secondary me-2">All</button>
+                            <button class="btn btn-outline-secondary me-2">Burgers</button>
+                            <button class="btn btn-outline-secondary me-2">Pizza</button>
+                            <button class="btn btn-outline-secondary me-2">Asian</button>
+                            <button class="btn btn-outline-secondary me-2">Desserts</button>
+                        </div>
+
+                        <!-- Menu Items Grid -->
+                        <div class="row g-4">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-item-card shadow rounded-4 overflow-hidden">
+                                    <div class="menu-item-image">🍔</div>
+                                    <div class="p-3">
+                                        <h5 class="fw-bold">Deluxe Burger</h5>
+                                        <p class="text-muted small">Juicy patty with fresh vegetables</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold text-secondary fs-5">$12.99</span>
+                                            <button class="btn btn-sm btn-dark">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-item-card shadow rounded-4 overflow-hidden">
+                                    <div class="menu-item-image">🍕</div>
+                                    <div class="p-3">
+                                        <h5 class="fw-bold">Cheese Pizza</h5>
+                                        <p class="text-muted small">Classic pizza with mozzarella</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold text-secondary fs-5">$11.99</span>
+                                            <button class="btn btn-sm btn-dark">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-item-card shadow rounded-4 overflow-hidden">
+                                    <div class="menu-item-image">🍜</div>
+                                    <div class="p-3">
+                                        <h5 class="fw-bold">Spicy Noodles</h5>
+                                        <p class="text-muted small">Asian-style noodles with spice</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold text-secondary fs-5">$10.99</span>
+                                            <button class="btn btn-sm btn-dark">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-item-card shadow rounded-4 overflow-hidden">
+                                    <div class="menu-item-image">🍱</div>
+                                    <div class="p-3">
+                                        <h5 class="fw-bold">Sushi Platter</h5>
+                                        <p class="text-muted small">Fresh sushi with ginger</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold text-secondary fs-5">$14.99</span>
+                                            <button class="btn btn-sm btn-dark">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-item-card shadow rounded-4 overflow-hidden">
+                                    <div class="menu-item-image">🌮</div>
+                                    <div class="p-3">
+                                        <h5 class="fw-bold">Tacos Combo</h5>
+                                        <p class="text-muted small">3 tacos with all the toppings</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold text-secondary fs-5">$9.99</span>
+                                            <button class="btn btn-sm btn-dark">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-item-card shadow rounded-4 overflow-hidden">
+                                    <div class="menu-item-image">🍰</div>
+                                    <div class="p-3">
+                                        <h5 class="fw-bold">Chocolate Cake</h5>
+                                        <p class="text-muted small">Rich and creamy dessert</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold text-secondary fs-5">$6.99</span>
+                                            <button class="btn btn-sm btn-dark">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ORDERS SECTION -->
+                <section id="orders-section" class="content-section">
+                    <div class="container-fluid p-4">
+                        <h2 class="fw-bold mb-4">My Orders</h2>
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="order-card bg-white shadow rounded-4 p-4">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <h5 class="fw-bold mb-1">Order #ORD001</h5>
+                                            <p class="text-muted small mb-0">Nov 24, 2025</p>
+                                        </div>
+                                        <span class="badge bg-success">Delivered</span>
+                                    </div>
+                                    <hr>
+                                    <p><strong>Restaurant:</strong> Burger Palace</p>
+                                    <p><strong>Items:</strong> 2x Deluxe Burger, 1x Fries</p>
+                                    <p><strong>Total:</strong> $25.50</p>
+                                    <button class="btn btn-sm btn-outline-secondary">Reorder</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="order-card bg-white shadow rounded-4 p-4">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <h5 class="fw-bold mb-1">Order #ORD002</h5>
+                                            <p class="text-muted small mb-0">Nov 23, 2025</p>
+                                        </div>
+                                        <span class="badge bg-success">Delivered</span>
+                                    </div>
+                                    <hr>
+                                    <p><strong>Restaurant:</strong> Italian Corner</p>
+                                    <p><strong>Items:</strong> 1x Spaghetti Carbonara, 1x Caesar Salad</p>
+                                    <p><strong>Total:</strong> $35.75</p>
+                                    <button class="btn btn-sm btn-outline-secondary">Reorder</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAVORITES SECTION -->
+                <section id="favorites-section" class="content-section">
+                    <div class="container-fluid p-4">
+                        <h2 class="fw-bold mb-4">My Favorite Dishes</h2>
+                        <div class="row g-4">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="favorite-card shadow rounded-4 overflow-hidden position-relative">
+                                    <div class="favorite-image">🍔</div>
+                                    <div class="p-3">
+                                        <h5 class="fw-bold">Deluxe Burger</h5>
+                                        <p class="text-muted small">Burger Palace</p>
+                                        <p class="fw-bold text-secondary">$12.99</p>
+                                        <button class="btn btn-sm btn-dark w-100">Order Now</button>
+                                    </div>
+                                    <button class="btn-favorite">❤️</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="favorite-card shadow rounded-4 overflow-hidden position-relative">
+                                    <div class="favorite-image">🍕</div>
+                                    <div class="p-3">
+                                        <h5 class="fw-bold">Cheese Pizza</h5>
+                                        <p class="text-muted small">Italian Corner</p>
+                                        <p class="fw-bold text-secondary">$11.99</p>
+                                        <button class="btn btn-sm btn-dark w-100">Order Now</button>
+                                    </div>
+                                    <button class="btn-favorite">❤️</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="favorite-card shadow rounded-4 overflow-hidden position-relative">
+                                    <div class="favorite-image">🍜</div>
+                                    <div class="p-3">
+                                        <h5 class="fw-bold">Spicy Noodles</h5>
+                                        <p class="text-muted small">Noodle House</p>
+                                        <p class="fw-bold text-secondary">$10.99</p>
+                                        <button class="btn btn-sm btn-dark w-100">Order Now</button>
+                                    </div>
+                                    <button class="btn-favorite">❤️</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="favorite-card shadow rounded-4 overflow-hidden position-relative">
+                                    <div class="favorite-image">🍱</div>
+                                    <div class="p-3">
+                                        <h5 class="fw-bold">Sushi Platter</h5>
+                                        <p class="text-muted small">Japanese Cuisine</p>
+                                        <p class="fw-bold text-secondary">$14.99</p>
+                                        <button class="btn btn-sm btn-dark w-100">Order Now</button>
+                                    </div>
+                                    <button class="btn-favorite">❤️</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PROFILE SECTION -->
+                <section id="profile-section" class="content-section">
+                    <div class="container-fluid p-4">
+                        <h2 class="fw-bold mb-4">My Profile</h2>
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="profile-card bg-white shadow rounded-4 p-4 text-center">
+                                    <div class="profile-avatar mb-3">👤</div>
+                                    <h4 class="fw-bold">John Doe</h4>
+                                    <p class="text-muted">Member since Nov 2024</p>
+                                    <button class="btn btn-sm btn-secondary w-100 mb-2">Edit Profile</button>
+                                    <button class="btn btn-sm btn-outline-secondary w-100">Change Avatar</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="profile-details bg-white shadow rounded-4 p-4">
+                                    <h5 class="fw-bold mb-4">Account Information</h5>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Email</label>
+                                        <input type="email" class="form-control" value="john@example.com" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Phone</label>
+                                        <input type="text" class="form-control" value="+234 813-646-1266" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Address</label>
+                                        <input type="text" class="form-control" value="No.4 Oshodi Street, Lagos Island"
+                                            disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">City</label>
+                                        <input type="text" class="form-control" value="Lagos" disabled>
+                                    </div>
+                                    <button class="btn btn-secondary">Edit Information</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SETTINGS SECTION -->
+                <section id="settings-section" class="content-section">
+                    <div class="container-fluid p-4">
+                        <h2 class="fw-bold mb-4">Settings</h2>
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="settings-card bg-white shadow rounded-4 p-4">
+                                    <h5 class="fw-bold mb-3">Notification Preferences</h5>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="emailNotif" checked>
+                                        <label class="form-check-label" for="emailNotif">
+                                            Email Notifications
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="smsNotif" checked>
+                                        <label class="form-check-label" for="smsNotif">
+                                            SMS Notifications
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="promoNotif">
+                                        <label class="form-check-label" for="promoNotif">
+                                            Promotional Offers
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-secondary">Save Preferences</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="settings-card bg-white shadow rounded-4 p-4">
+                                    <h5 class="fw-bold mb-3">Account Security</h5>
+                                    <p class="text-muted">Manage your password and security settings</p>
+                                    <button class="btn btn-outline-secondary mb-2 w-100">Change Password</button>
+                                    <button class="btn btn-outline-secondary mb-2 w-100">Two-Factor
+                                        Authentication</button>
+                                    <button class="btn btn-outline-danger w-100">Delete Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQjUivZ5eA7NTe+KN3t5xF6/uS0Hxs/gkM9aL7oHWN3X0YXBi8RfCLVqCfJYWl"
+        crossorigin="anonymous"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
